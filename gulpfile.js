@@ -20,6 +20,7 @@ var paths = {
   scripts: ['js/**/*.js'],
   styles: ['css/bootstrap.min.css', 'css/main.css'],
   images: ['img/**/*.jpg', 'img/**/*.png'],
+  svgs: ['img/**/*.svg'],
   fonts: ['fonts/**/*'],
   img_out: '/img',
   css_out: '/css',
@@ -30,7 +31,7 @@ var paths = {
   extras: ['apple-touch-icon.png.xml', 'browserconfig.xml', 'favicon.ico', 'tile.png', 'tile-wide.png', 'robots.txt', 'favicon.ico'],
 };
 
-gulp.task('build', gulpSequence(['responsive', 'extras', 'html', 'css', 'scripts']));
+gulp.task('build', gulpSequence(['responsive', 'svg', 'extras', 'html', 'css', 'scripts']));
 
 gulp.task('default', gulpSequence('clean', 'build'));
 
@@ -66,6 +67,13 @@ gulp.task('css', function() {
  .pipe(gulp.dest(bases.dist + paths.css_out));
 });
 
+// Process svgs
+gulp.task('svg', function() {
+  gulp.src(paths.svgs, {cwd: bases.src})
+ .pipe(print())
+ .pipe(gulp.dest(bases.dist + paths.img_out));
+});
+
 // Process fonts
 gulp.task('fonts', function() {
   gulp.src(paths.fonts, {cwd: bases.src})
@@ -83,19 +91,27 @@ gulp.task('scripts', function() {
 
 gulp.task('responsive', function () {
   gulp.src(paths.images, {cwd: bases.src})
+    .pipe(print())
     .pipe(responsive({
-          '*top_image.jpg': 
+          '*top_image*.jpg':
           [
             {
-              width: 320,
-              rename: { suffix: '-320' }
-            },{
-              width: 320 * 2,
+              width: 640,
               // don't rename --- this will be our fallback size
             }
+            ,{
+              width: 1200,
+              rename: { suffix: '@2x' }
+            }
           ],
-          '**/content*.jpg': [{/*pass through other images*/}], 
-          '**/*.png': [{/*pass through other images*/}], 
+          '**/content*.jpg': [{
+              width: 400,
+              rename: { suffix: '_400' }
+            }
+            ,{
+              width: 720,
+              rename: { suffix: '_720' }
+            }],
         },
         {
           // Global configuration for all images

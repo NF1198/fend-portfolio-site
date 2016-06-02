@@ -1,81 +1,132 @@
 /* ==========================================================================
    Custom styles
    ========================================================================== */
-.header {
-  margin-top: 10px;
+
+body, html {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    /* ref: https://philiprogers.com/svgpatterns/#thinstripes */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZWVlIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiNkZGQiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=");
+    background-repeat: repeat;
+}
+
+header {
+    margin-top: 0;
+    background-color: #fff;
+    padding: 10px 0px;
+}
+
+header, .container {
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1, h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    font-weight: 300;
 }
 
 h2 {
-  font-weight: 500;
-  color: #7d97ad;
-  padding-left: 4px;
-  font-size: 28px;
-  margin-top: 10px;
+    font-weight: 500;
+    color: #7d97ad;
+    padding-left: 4px;
+    font-size: 28px;
+    margin-top: 10px;
 }
 
+h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#title {
+  padding-right: 10px;
+}
 .subtitle {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 hr {
-  border-width: 2px;
-  border-color: #8295A8;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.header, .container {
-  max-width: 60em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header {
-  background-color: inherit;
-  padding: 10px 0px;
+    border-width: 2px;
+    border-color: #8295A8;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .portfolio-item {
-  text-align: center;
-  padding-bottom: 1.5em;
-}
-
-img {
-  width: 100%;
+    text-align: center;
+    padding-bottom: 1.5em;
 }
 
 .logo {
-  display: block;
-  float: left;
-  width: auto;
-  min-width: 48px;
-  min-height: 48px;
+    display: block;
+    float: left;
+    width: auto;
+    min-width: 64px;
+    min-height: 64px;
+    height: 64px;
+    width: 64px;
+    background-image: url('../img/logo.svg');
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+}
+
+.logo:hover {
+    background-image: url('../img/logo_inv.svg');
+}
+
+.introduction {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 5px #999;
+}
+
+.top-image {
+    width: 100%;
+}
+
+.row {
+    margin-top: 1em;
 }
 
 @media screen and (min-width: 768px) {
-  .portfolio-item {
-    padding-bottom: inherit;
-  }
+    header {
+      margin-top: 10px;
+    }
+
+    .portfolio-item {
+        padding-bottom: inherit;
+    }
+
+    .introduction {
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+    }
 }
 
 @media screen and (min-width: 992px) {
-  h1 {
-    font-size: 42px;
-  }
-  .subtitle {
-    font-size: 18px;
-  }
+    h1 {
+        font-size: 42px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-}
-
-@media screen and (min-width: 768px) {
+    /* TODO (placeholder for future responsive styles) */
 }

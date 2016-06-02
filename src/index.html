@@ -16,69 +16,135 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500,300' rel='stylesheet'>
 </head>
 
 <body>
     <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="logo">
-                      <img src="img/logo.png" alt="logo" />
-                    </div>
-                    <div>
-                      <h1 class="text-right text-uppercase">Nicholas Folse</h1>
-                      <p class="subtitle text-right text-uppercase">Front-end Ninja</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <hr />
+    <header class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="logo"></div>
+                <div id="title">
+                    <h1 class="text-right text-uppercase">Nicholas Folse</h1>
+                    <p class="subtitle text-right text-uppercase">Front-end Ninja</p>
                 </div>
             </div>
         </div>
-    </div>
+        <hr />
+    </header>
 
-    <div class="container">
+    <section id="intro-content" class="container">
         <div class="row">
             <div class="col-md-12">
-                <img class="top-image" src="img/top_image.jpg" alt="top image" />
+                <picture>
+                    <!-- Image credit: Nicholas Folse (c) 2015 -->
+                    <source media="(min-width: 768px)" srcset="img/top_image.jpg 1x, img/top_image@2x.jpg 2x">
+                    <source srcset="img/top_image_crop.jpg 1x, img/top_image_crop@2x.jpg 2x">
+                    <img class="top-image img-responsive img-rounded" src="img/top_image_crop.jpg" alt="top image" />
+                </picture>
             </div>
         </div>
+        <article class="introduction" class="row">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu imperdiet enim. Donec hendrerit arcu id mauris hendrerit viverra. Aliquam nunc lectus, tempor at leo sit amet, eleifend volutpat elit. Vestibulum ut hendrerit risus. Pellentesque dolor
+                ipsum, congue id est a, venenatis lacinia quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec condimentum augue. Maecenas maximus libero sit amet lectus dignissim. Vestibulum ante ipsum primis in faucibus.
+            </p>
+            <p>
+                Curabitur ultrices vestibulum magna, vulputate tempus sapien venenatis et. Duis justo mauris, cursus nec imperdiet et, lobortis a magna. Cras gravida urna eget velit volutpat fermentum. Integer molestie quis erat et iaculis. Phasellus nec augue ut lorem
+                faucibus fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque non lacus laoreet, tincidunt diam ac, sodales nulla. Nam scelerisque est non tortor malesuada pharetra.
+            </p>
+        </article>
+    </section>
+    <section id="body-content" class="container">
         <div class="row">
             <div class="col-md-12">
                 <h2>Featured Work</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
-                <div class="portfolio-item">
-                    <img src="img/content_1.jpg" alt="content 1" />
-                    <h3 class="text-uppercase">Appify</h3>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="portfolio-item">
-                    <img src="img/content_2.jpg" alt="content 2" />
-                    <h3 class="text-uppercase">Sunflower</h3>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="portfolio-item">
-                    <img src="img/content_3.jpg" alt="content 3" />
-                    <h3 class="text-uppercase">Bokeh</h3>
-                </div>
-            </div>
+            <article class="col-sm-4 portfolio-item">
+                <!-- Image credit: Nicholas Folse (c) 2015 -->
+                <figure>
+                    <img class="img-responsive img-rounded" src="img/content_1_720.jpg" srcset="img/content_1_400.jpg 400w, img/content_1_720.jpg 720w" sizes="(min-width: 768px) 33.3vw, 100vw" alt="glass" />
+                    <figcaption>
+                        <h3 class="text-uppercase">Glass</h3>
+                    </figcaption>
+                </figure>
+                <p>
+                    This is glass.
+                </p>
+            </article>
+            <article class="col-sm-4 portfolio-item">
+                <!-- Image credit: Nicholas Folse (c) 2015 -->
+                <figure>
+                    <img class="img-responsive img-rounded" src="img/content_2_720.jpg" srcset="img/content_2_400.jpg 400w, img/content_2_720.jpg 720w" sizes="(min-width: 768px) 33.3vw, 100vw" alt="tree" />
+                    <figcaption>
+                        <h3 class="text-uppercase">Tree</h3>
+                    </figcaption>
+                </figure>
+                <p>
+                    This is tree.
+                </p>
+            </article>
+            <article class="col-sm-4 portfolio-item">
+                <!-- Image credit: Nicholas Folse (c) 2015 -->
+                <figure>
+                    <img class="img-responsive img-rounded" src="img/content_3_720.jpg" srcset="img/content_3_400.jpg 400w, img/content_3_720.jpg 720w" sizes="(min-width: 768px) 33.3vw, 100vw" alt="rock" />
+                    <figcaption>
+                        <h3 class="text-uppercase">Rock</h3>
+                    </figcaption>
+                </figure>
+                <p>
+                    This is rock.
+                </p>
+            </article>
         </div>
-        <footer>
-        </footer>
-    </div>
-    <!-- /container -->
+        <div class="row">
+            <article class="col-sm-4 portfolio-item">
+                <!-- Image credit: Nicholas Folse (c) 2015 -->
+                <figure>
+                    <img class="img-responsive img-rounded" src="img/content_4_720.jpg" srcset="img/content_4_400.jpg 400w, img/content_4_720.jpg 720w" sizes="(min-width: 768px) 33.3vw, 100vw" alt="beetle" />
+                    <figcaption>
+                        <h3 class="text-uppercase">Beetle</h3>
+                    </figcaption>
+                </figure>
+                <p>
+                    This is beetle.
+                </p>
+            </article>
+            <article class="col-sm-4 portfolio-item">
+                <!-- Image credit: Nicholas Folse (c) 2015 -->
+                <figure>
+                    <img class="img-responsive img-rounded" src="img/content_5_720.jpg" srcset="img/content_5_400.jpg 400w, img/content_5_720.jpg 720w" sizes="(min-width: 768px) 33.3vw, 100vw" alt="grand canyon" />
+                    <figcaption>
+                        <h3 class="text-uppercase">Grand Canyon</h3>
+                    </figcaption>
+                </figure>
+                <p>
+                    This is Grand Canyon.
+                </p>
+            </article>
+            <article class="col-sm-4 portfolio-item">
+                <!-- Image credit: Nicholas Folse (c) 2015 -->
+                <figure>
+                    <img class="img-responsive img-rounded" src="img/content_6_720.jpg" srcset="img/content_6_400.jpg 400w, img/content_6_720.jpg 720w" sizes="(min-width: 768px) 33.3vw, 100vw" alt="grasshopper" />
+                    <figcaption>
+                        <h3 class="text-uppercase">Grasshopper</h3>
+                    </figcaption>
+                </figure>
+                <p>
+                    This is grasshopper.
+                </p>
+            </article>
+        </div>
+    </section>
+    <footer>
+        <!--TODO-->
+    </footer>
+
 </body>
 
 </html>
