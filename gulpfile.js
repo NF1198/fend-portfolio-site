@@ -28,7 +28,7 @@ var paths = {
   scripts_out: '/js',
   html: ['**/*.html'],
   clean: ['**/*.*'],
-  extras: ['apple-touch-icon.png.xml', 'browserconfig.xml', 'favicon.ico', 'tile.png', 'tile-wide.png', 'robots.txt', 'favicon.ico'],
+  extras: ['apple-touch-icon.png.xml', 'browserconfig.xml', 'favicon.ico', 'robots.txt', 'favicon.ico'],
 };
 
 gulp.task('build', gulpSequence(['responsive', 'svg', 'extras', 'html', 'css', 'scripts']));
