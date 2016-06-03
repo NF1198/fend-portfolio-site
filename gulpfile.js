@@ -7,8 +7,6 @@ const gulpSequence = require('gulp-sequence');
 const print = require('gulp-print');
 const copy = require('gulp-copy');
 const clean = require('gulp-clean');
-const uglify = require('gulp-uglify');
-const sass = require('gulp-sass');
 const responsive = require('gulp-responsive');
 
 var bases = {

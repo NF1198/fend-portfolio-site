@@ -1,17 +1,18 @@
 {
-  "name": "portfoliosite",
+  "name": "Portfolio Site",
   "version": "1.0.0",
   "description": "Udacity Front-end Web Developer Course",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Nicholas Folse",
   "license": "ISC",
   "devDependencies": {
+    "gulp-clean": "0.3.2",
     "gulp-copy": "0.0.2",
     "gulp-print": "2.0.1",
-    "gulp-sass": "2.3.1",
+    "gulp-responsive": "2.4.0",
     "gulp-sequence": "0.4.5"
   },
   "dependencies": {}
