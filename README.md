@@ -3,6 +3,7 @@ Nicholas Folse Portfolio Site
 
 This is my portfolio project for the Udacity Front End Web Developer Nano-degree
 
+[View site](https://nf1198.github.io/fend-portfolio-site/)
 
 Build
 =======
